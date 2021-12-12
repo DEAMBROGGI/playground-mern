@@ -1,0 +1,13 @@
+1.0 Autenticacion con cuenta GOOGLE
+
+1.1 Ingresar en GOOGLE CLOUD PLATAFORM y habilitar las credenciales del proyecto https://cloud.google.com/
+            - Crear un nuevo proyecto
+            - Consentimiento de OAuth (colocar OAuth en buscador)
+            - Ir a credenciales y crearlas, seleccionar Id de cliente OAuth y tipo  de aplicacion
+            - Dentro de Permisos de origen de JavaScrip, colocar la URI de conexion con Google (localhost:5000), 
+            y en redireccionamiento autorizado la ruta a donde debe dirigirse, luego de que Google de el ok
+            - Guardar la credencial en .env para no enviar a GIT
+
+1.2 Crear frontend para signIN y logIN google npm i react-google-login https://www.npmjs.com/package/react-google-login
+            - Importar modulo iniciarSesion line 7
+            - Generar elemento de renderizado iniciarSesion line 22

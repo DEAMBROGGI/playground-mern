@@ -1,0 +1,15 @@
+Cuando hacemos logIn o SignIn desde el fronten nuestra peticion va a las acciones de redux
+        - authAction y trae el nombre de usuario y password del usuario definido
+        - realiza un post a auth/signIn o signUp dependiendo el caso con los datos del usuario
+
+1 - Creamos el modelo Personas para nuestra db (/models/Persona.js)
+2 - Definimos nuestros criterios de validacion con joi. (config/validator.js)
+3 - Creamos los controladores para Personas. (/controllers/personasControllers.js)
+        - En este punto tenemos dos opciones 
+            a) - Que sea un nuevo usuario fc = nuevoUsuario = personasControllers.js line 16
+                    - Que se cree un nuevo usuario SUCCESS
+                    - que el usuario que se pretende crear ya exista ERROR
+                    - que los datos ingresados no cumplan con el criterio establecido ERROR
+            b) - Que se quiera acceder a la cuenta
+                    -creamos nuestra estrategia para solicita accesos a la base passport.js
+
